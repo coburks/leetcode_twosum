@@ -1,0 +1,332 @@
+# leetcode_twosum
+My Twosum leetcode solution 
+-----notes below-----
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+
+
+
+array of intergers 
+
+input nums = [1,2,3,4] target = 7
+
+output: [2,3]
+
+
+
+List items are indexed, the first item has index [0], the second item has index [1] etc.
+
+
+
+
+
+for x in nums 
+
+
+so I need to create an algorithm that searches the items in the array and attemts to sum the interger items
+to equal the target, then returns the indices (index numbers) of the items that sum to target
+
+
+
+num[x] + num[y] = target
+
+
+add together separate items in the list until you find one that equals the target, then print the index of the items
+that added together to equal the remainder
+
+
+
+
+
+
+# Python program to find sum of elements in list
+total = 0
+ 
+# creating a list
+list1 = [11, 5, 17, 18, 23]
+ 
+# Iterate each element in list
+# and add them in variable total
+for ele in range(0, len(list1)):
+    total = total + list1[ele]
+ 
+# printing total value
+print("Sum of all elements in given list: ", total)
+
+
+1 2 3 4
+
+7 - 1 = 6
+7 - 2 = 5
+7 - 3 = 4
+7 - 4 = 3
+
+6 5 4 3
+
+
+y = x + ele
+
+y = 6 + 1
+y = 5 + 2
+y = 4 + 3
+y = 3 + 4
+
+if y = 7 then x = |x-7|
+
+|6-7| = 1
+|5-7| = 2
+|4-7| = 3
+|3-7| = 4
+
+ele = 
+1
+2
+3
+4
+
+x + y
+1 + 1
+2 + 2
+3 + 3
+4 + 4
+
+
+for ele in nums:
+        if ele < target:
+            x = target - ele 
+        if ele > target:
+            x = ele - target
+        for ele in nums:
+            a = x + ele
+            print(ele)
+
+a = [ ele = 1 2 3 4   1 2 3 4     1 2 3 4     1 2 3 4]
+    [   x = 6 5 4 3   6 5 4 3     6 5 4 3     6 5 4 3]
+
+a = 7 7 7 7 7
+
+there are 5 7's because we added ele and x, two variables that each have 16 values
+
+there is only one true 7 per pair, but we have 4 pairs + "a" as a new variable who also
+is a 7
+
+
+thus 5 7's
+
+
+
+print(nums.index(x)) will return the index of the highest value list item (x = max(nums))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hashing algorithm
+
+a hashing algorithm is a calculation applied to a key to transform it into an address
+
+the key can be the value of an array element
+
+for numeric keys, divide the key(numeric element) by the number of availible addresses, n,
+and take the remainder via modulo
+
+
+
+nums = [1,2,3,4]
+
+for n in nums:
+    address = n % len(nums)
+
+
+
+
+
+
+
+
+
+1 % 4 = 1
+
+2 % 4 = 2
+
+3 % 4 = 3 
+
+4 % 4 = 0
+
+
+
+
+
+so now i need to query the dictionary for two values(keys) that sum to equal the target.
+
+then once I have those values, print their index as "x,y"
+
+
+
+
+
+target = the values of two keys summed
+
+
+
+
+for all the keys in the dictionary:
+    if target == value of key(x) + value of key(y)
+        print(i(x),i(y))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+table values
+
+3 : 3
+6 : 6
+print (3, 4)
+5 : 5
+
+
+
+
+
+repr() : The repr() method used to print enum member.
+type(): This is used to print the type of enum member.
+
+
+
+
+
+
+
+
+
+
+need to print key of y
+
+
+
+
+
+
+
+nums - [2,7,11,15]
+target = 9
+
+
+
+enumerate(nums)=
+k,v
+
+0,2
+1,7
+2,11
+3,15
+
+for k,v in enumerate(nums):
+    y = target - v
+    if y in table:
+        print the key of y and the key of v
+    else:
+        put the non y matching value into the table by the key
+return
+
+
+table values
+
+9 - 2 = 7
+is 7 in table
+no
+put 2 in the table and assign a key (key assignment is linear(0,1,2,3,etc..))
+
+9 - 7 = 2
+is 2 in table
+no
+put 7 in table and assign a key
+
+9 - 11 = -2
+is -2 in table
+no 
+put 11 and assign a key
+
+9 - 15 = -6
+is - 6 in table
+no
+put 15 and assign key
+
+function then loops back around until y is found in table
+
+9 - 2 = 7
+is 7 in table
+yes
+return keys of 2 and 7 [0,1]
+
+
+table
+0 : 2
+1 : 7
+2 : 11
+3 : 15
+
+
+how do i return the key of y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
