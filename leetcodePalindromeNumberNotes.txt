@@ -1,0 +1,69 @@
+Given an integer x, return true if x is palindrome integer.
+
+An integer is a palindrome when it reads the same backward as forward.
+
+For example, 121 is a palindrome while 123 is not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+print interger as a string , assign string to variable a
+print a reversed as a string, assign string to variable b
+
+if a == b
+    return true
+else
+    return false
+
+
+
+
+
+
+
+
+list = [a,b]
+
+for n in list:
+    if n == n
+        return True 
+    else:
+        return False
+
+
+
+
+
+
+
+
+
+
+
+
+but if we wanted to check it without a string, 
+we know that any number divided by itself = 1 
+so we can take x and divide by y
+if x/y = 1 then x is a palindrome
+
+how to generate y, which is x but reversed
+what if we converted x to a floating point number then evaluated the value of each digit place
+in each place were reversed 
+
+
+
+
+
+
+
+
+
